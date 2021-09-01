@@ -1,7 +1,19 @@
 document.getElementById('error-message').style.display = 'none';
+
+
+const toggoleSpinner= displaySpinner => {
+    document.getElementById('spinner').style.display= displaySpinner;
+
+}
+
 const searchFood = () => {
+
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
+
+    //show the spinner
+    toggoleSpinner('block')
+    
     // clear data
     searchField.value = '';
     document.getElementById('error-message').style.display = 'none';

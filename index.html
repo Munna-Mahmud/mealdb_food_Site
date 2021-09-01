@@ -1,4 +1,3 @@
-  
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,16 +9,30 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
+<style>
+   .laodspinner p{
+        text-align: center;
+        display: none;
+    }
+</style>
 
 <body class="bg-light">
     <h2 class="text-center mx-auto text-success shadow-sm p-2  w-50 ">Search your favorite food</h2>
     <!-- meal search area -->
-    <div class="input-group mb-3 w-50 mx-auto">
-        <input id="search-field" type="text" class="form-control shadow-lg mt-2 p-2" placeholder="Search the food you want"
-            aria-label="Recipient's username" aria-describedby="button-addon2">
+    <div class="input-group mb-3 w-50 mx-auto mb-5">
+        <input id="search-field" type="text" class="form-control shadow-lg mt-2 p-2 "
+            placeholder="Search the food you want" aria-label="Recipient's username" aria-describedby="button-addon2">
+
         <button onclick="searchFood()" class="btn btn-outline  mt-2 bg-info" type="button"
             id="button-search">search</button>
     </div>
+    <div class="spinner-border laodspinner" id="spinner" role="status">
+        <p>Loading..</p>
+     
+    </div>
+    <!-- <div id="spinnerr" class="spinner">
+            <p>Loadeding....</p>
+        </div> -->
     <div>
         <p id="error-message" class=" text-danger text-center mx-auto">Something went wrong please try again later</p>
     </div>
