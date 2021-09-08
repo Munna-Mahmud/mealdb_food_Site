@@ -6,7 +6,8 @@ const searchFood = () => {
     searchField.value = '';
     document.getElementById('error-message').style.display = 'none';
     if (searchText == '') {
-        // please write something to display
+      alert('please write something ')
+        return alert;
     }
     else {
         // load data
